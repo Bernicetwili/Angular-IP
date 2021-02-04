@@ -9,7 +9,7 @@
           <div *ngIf="name.errors.required">
               Your name is required.
           </div>
-          <!-- <div *ngIf="name.errors.minlength"> -->
+           <div *ngIf="name.errors.minlength"> 
             Name is at least 3 characters long.
           </div>
         </div> 
@@ -18,7 +18,7 @@
         <label for="name">Quote Tittle</label>
         <input type="text" required class="form-control" id="title" [(ngModel)]="quoted.title" name="title" #title='ngModel'>
         <div *ngIf="title.invalid && title.dirty" class="alert alert-danger">
-          <!--<div *ngIf="title.errors.required"> -->
+          <div *ngIf="title.errors.required"> 
               Title is required.
           </div>
         </div>
@@ -27,7 +27,7 @@
         <label for="description">Quote</label>
         <textarea class="form-control" id="quote" rows="2" required [(ngModel)]="quoted.quote" name="quote" #quote='ngModel'></textarea>
         <div *ngIf="quote.invalid && quote.dirty" class="alert alert-danger">
-          <!--<div *ngIf="quote.errors.required"> -->
+          <div *ngIf="quote.errors.required">
               Quote can not be empty.
           </div>
         </div>
